@@ -39,7 +39,21 @@ const HomeScreen: React.FunctionComponent<HomeScreenProps> = (props) => {
                         backgroundColor: 'green', 
                         borderRadius: 15
                         }} />
-                        <Input placeholder="Username" containerStyle={{flex: 1}} />                            
+                        <Input 
+                        placeholder="Username" containerStyle={{flex: 1}} />                            
+                </View>
+
+                {/* Password Input */}
+                <View style={{flexDirection: 'row'}}>
+                    {/* Icon */}
+                    <View style={{
+                        width: 30, 
+                        height: 30, 
+                        backgroundColor: 'red', 
+                        borderRadius: 15
+                        }} />
+                        <Input 
+                        placeholder="Password" containerStyle={{flex: 1}} />                            
                 </View>
             </View>
         </ImageBackground>
