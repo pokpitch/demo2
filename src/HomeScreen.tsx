@@ -40,7 +40,9 @@ const HomeScreen: React.FunctionComponent<HomeScreenProps> = (props) => {
                         borderRadius: 15
                         }} />
                         <Input 
-                        placeholder="Username" containerStyle={{flex: 1}} />                            
+                        placeholder="Username" 
+                        containerStyle={{flex: 1}} 
+                        />                            
                 </View>
 
                 {/* Password Input */}
@@ -53,7 +55,10 @@ const HomeScreen: React.FunctionComponent<HomeScreenProps> = (props) => {
                         borderRadius: 15
                         }} />
                         <Input 
-                        placeholder="Password" containerStyle={{flex: 1}} />                            
+                        secureTextEntry
+                        placeholder="Password" 
+                        containerStyle={{flex: 1}} 
+                        />                            
                 </View>
             </View>
         </ImageBackground>
