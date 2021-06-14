@@ -9,6 +9,7 @@ import {
   StyleSheet,
   ViewStyle,
   TextInputProps,
+  TextInput
  } from 'react-native'
 
 interface HomeScreenProps {}
@@ -29,14 +30,22 @@ const HomeScreen: React.FunctionComponent<HomeScreenProps> = (props) => {
                 }}>
                 {/* Username Input */}
                 <View style={{flexDirection: 'row'}}>
+                    {/* Icon */}
                     <View style={{
                         width: 30, 
                         height: 30, 
                         backgroundColor: 'green', 
                         borderRadius: 15
-                        }}>
-
-                    </View>
+                        }}/>                            
+                    <TextInput 
+                    placeholder='Username'
+                    style={{
+                        backgroundColor: '#0003', 
+                        flex: 1, 
+                        marginLeft: 16, 
+                        paddingLeft: 16,
+                        borderRadius: 5,
+                        height: 40}}/>
                 </View>
             </View>
         </ImageBackground>
