@@ -61,7 +61,13 @@ const HomeScreen: React.FunctionComponent<HomeScreenProps> = (props) => {
                         containerStyle={{flex: 1}} 
                         />                            
                 </View>
+
+                <View style={{marginTop: 30}} />
                 <Button title="Login" onPress={() => {}} />
+
+                <View style={{marginTop: 30}} />
+                <Button title="Register" onPress={() => {}} />
+
             </View>
         </ImageBackground>
     )
