@@ -32,7 +32,7 @@ const HomeScreen: React.FunctionComponent<HomeScreenProps> = (props) => {
                 padding: 16,
                 }}>
                 {/* Username Input */}
-                <View style={{flexDirection: 'row'}}>
+                <View style={{flexDirection: 'row', alignItems: 'center'}}>
                     {/* Icon */}
                     <View style={{
                         width: 30, 
