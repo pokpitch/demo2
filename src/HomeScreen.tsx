@@ -9,7 +9,8 @@ import {
   StyleSheet,
   ViewStyle,
   TextInputProps,
-  TextInput
+  TextInput,
+  Text
  } from 'react-native'
 
 import { Input } from 'react-native-elements';
@@ -65,8 +66,10 @@ const HomeScreen: React.FunctionComponent<HomeScreenProps> = (props) => {
                 <View style={{marginTop: 30}} />
                 <Button title="Login" onPress={() => {}} />
 
-                <View style={{marginTop: 30}} />
-                <Button title="Register" onPress={() => {}} />
+                <View style={{marginTop: 16}} />
+                <TouchableOpacity style={{height: 30}}>
+                    <Text style={{textAlign: 'center'}}>Register</Text>
+                </TouchableOpacity>
 
             </View>
         </ImageBackground>
