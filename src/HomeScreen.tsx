@@ -38,8 +38,8 @@ const HomeScreen: React.FunctionComponent<HomeScreenProps> = (props) => {
                         height: 30, 
                         backgroundColor: 'green', 
                         borderRadius: 15
-                        }}/>
-                        <Input placeholder="BASIC INPUT" />                            
+                        }} />
+                        <Input placeholder="Username" containerStyle={{flex: 1}} />                            
                 </View>
             </View>
         </ImageBackground>
