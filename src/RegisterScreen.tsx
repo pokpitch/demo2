@@ -61,8 +61,13 @@ const RegisterScreen: React.FunctionComponent<RegisterScreenProps> = (props) => 
 
 export default RegisterScreen
 
+type StreamEntryProps = {
+    icon: string;
+    hint: string;
+};
+
 // Custom input component
-const StreamEntry = props => {
+const StreamEntry: React.FC<StreamEntryProps> = props => {
     return (                
     <View style={{flexDirection: 'row', alignItems: 'center'}}>
         <Icon 
