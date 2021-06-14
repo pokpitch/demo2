@@ -19,6 +19,8 @@ import { Input } from 'react-native-elements';
 interface RegisterScreenProps {}
 
 const RegisterScreen: React.FunctionComponent<RegisterScreenProps> = (props) => {
+    //let account = {username: '', password: ''};
+    const [account, setAccount] =  React.useState({username: '', password: ''});
     return (
         <ImageBackground source={require('./assets/img/bg.png')} style={{flex:1}}>
             {/* Authen Section */}
@@ -37,7 +39,10 @@ const RegisterScreen: React.FunctionComponent<RegisterScreenProps> = (props) => 
                 <StreamEntry 
                     icon='user' 
                     hint='Username'
-                    onChanged={text => console.log('Username: ' + text)}
+                    onChanged={text => {
+                        setAccount({username: text, password: account.password});
+                        console.log('Username: ' + account.username);
+                    }}
                     />
 
                 {/* Password Input */}
@@ -45,12 +50,17 @@ const RegisterScreen: React.FunctionComponent<RegisterScreenProps> = (props) => 
                     icon='lock' 
                     hint='Password' 
                     isPassword={true}
-                    onChanged={text => console.log('Password: ' + text)}
+                    onChanged={text => {
+                        setAccount({password: text, username: account.username});
+                        console.log('Password: ' + account.password);
+                    }}
                     />
+
+                <Text>Debug: {JSON.stringify(account)}</Text>
 
                 <View style={{marginTop: 30}} />
                 <Button title="Regiter" onPress={() => {
-                    Alert.alert('Register clicked')
+                    Alert.alert('Register clicked' + JSON.stringify(account))
                 }} />
 
                 <View style={{marginTop: 16}} />
@@ -75,7 +85,8 @@ export default RegisterScreen
 type StreamEntryProps = {
     icon: string;
     hint: string;
-    isPassword?: boolean
+    isPassword?: boolean;
+    onChanged: (text: string) => void
 };
 
 // Custom input component
