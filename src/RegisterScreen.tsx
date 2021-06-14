@@ -13,6 +13,7 @@ import {
   Text
  } from 'react-native'
 
+import Icon from 'react-native-vector-icons/FontAwesome';
 import { Input } from 'react-native-elements';
 
 interface RegisterScreenProps {}
@@ -33,10 +34,10 @@ const RegisterScreen: React.FunctionComponent<RegisterScreenProps> = (props) => 
                 }}>
 
                 {/* Username Input */}
-                <StreamEntry/>
+                <StreamEntry icon='user' hint='Username'/>
 
                 {/* Password Input */}
-                <StreamEntry/>
+                <StreamEntry icon='lock' hint='Password'/>
 
                 <View style={{marginTop: 30}} />
                 <Button title="Regiter" onPress={() => {}} />
@@ -61,18 +62,18 @@ const RegisterScreen: React.FunctionComponent<RegisterScreenProps> = (props) => 
 export default RegisterScreen
 
 // Custom input component
-const StreamEntry = () => {
+const StreamEntry = props => {
     return (                
     <View style={{flexDirection: 'row', alignItems: 'center'}}>
-        <View style={{
-            width: 30, 
-            height: 30, 
-            backgroundColor: 'green', 
-            borderRadius: 15
-            }} />
+        <Icon 
+            name={props.icon} 
+            size={35} 
+            color="#0006" 
+            style={{marginRight: 8}} 
+            />
             <Input
                 keyboardType="email-address" 
-                placeholder="Username" 
+                placeholder={props.hint}
                 containerStyle={{flex: 1}} 
             />                            
     </View>)
