@@ -19,7 +19,6 @@ import { Input } from 'react-native-elements';
 interface RegisterScreenProps {}
 
 const RegisterScreen: React.FunctionComponent<RegisterScreenProps> = (props) => {
-    //let account = {username: '', password: ''};
     const [account, setAccount] =  React.useState({username: '', password: ''});
     return (
         <ImageBackground source={require('./assets/img/bg.png')} style={{flex:1}}>
@@ -40,7 +39,7 @@ const RegisterScreen: React.FunctionComponent<RegisterScreenProps> = (props) => 
                     icon='user' 
                     hint='Username'
                     onChanged={text => {
-                        setAccount({username: text, password: account.password});
+                        setAccount({...account, username: text});
                         console.log('Username: ' + account.username);
                     }}
                     />
@@ -51,7 +50,7 @@ const RegisterScreen: React.FunctionComponent<RegisterScreenProps> = (props) => 
                     hint='Password' 
                     isPassword={true}
                     onChanged={text => {
-                        setAccount({password: text, username: account.username});
+                        setAccount({...account, password: text});
                         console.log('Password: ' + account.password);
                     }}
                     />
