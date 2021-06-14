@@ -1,13 +1,14 @@
 import React from 'react'
-import { View, Text } from 'react-native'
+import { View, Text, ImageBackground } from 'react-native'
 
 interface HomeScreenProps {}
 
 const HomeScreen: React.FunctionComponent<HomeScreenProps> = (props) => {
     return (
-        <View>
+        <ImageBackground source={require('./assets/img/bg.png')} style={{flex:1}}>
             <Text>Home</Text>
-        </View>
+        </ImageBackground>
+
     )
 }
 
