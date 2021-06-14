@@ -31,37 +31,12 @@ const RegisterScreen: React.FunctionComponent<RegisterScreenProps> = (props) => 
                 borderRadius: 10,
                 padding: 16,
                 }}>
+
                 {/* Username Input */}
-                <View style={{flexDirection: 'row', alignItems: 'center'}}>
-                    {/* Icon */}
-                    <View style={{
-                        width: 30, 
-                        height: 30, 
-                        backgroundColor: 'green', 
-                        borderRadius: 15
-                        }} />
-                        <Input
-                        keyboardType="email-address" 
-                        placeholder="Username" 
-                        containerStyle={{flex: 1}} 
-                        />                            
-                </View>
+                <StreamEntry/>
 
                 {/* Password Input */}
-                <View style={{flexDirection: 'row'}}>
-                    {/* Icon */}
-                    <View style={{
-                        width: 30, 
-                        height: 30, 
-                        backgroundColor: 'red', 
-                        borderRadius: 15
-                        }} />
-                        <Input 
-                        secureTextEntry
-                        placeholder="Password" 
-                        containerStyle={{flex: 1}} 
-                        />                            
-                </View>
+                <StreamEntry/>
 
                 <View style={{marginTop: 30}} />
                 <Button title="Regiter" onPress={() => {}} />
@@ -84,3 +59,21 @@ const RegisterScreen: React.FunctionComponent<RegisterScreenProps> = (props) => 
 }
 
 export default RegisterScreen
+
+// Custom input component
+const StreamEntry = () => {
+    return (                
+    <View style={{flexDirection: 'row', alignItems: 'center'}}>
+        <View style={{
+            width: 30, 
+            height: 30, 
+            backgroundColor: 'green', 
+            borderRadius: 15
+            }} />
+            <Input
+                keyboardType="email-address" 
+                placeholder="Username" 
+                containerStyle={{flex: 1}} 
+            />                            
+    </View>)
+}
