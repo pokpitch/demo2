@@ -17,6 +17,9 @@ Variables (3 types)
     yarn add react-native-elements react-native-vector-icons
     npx react-native link react-native-vector-icons
 
+    yarn add react-native-safe-area-context
+    npx react-native link react-native-safe-area-context
+
 
     yarn add @react-navigation/native @react-navigation/stack @react-navigation/bottom-tabs
     yarn add react-native-reanimated react-native-gesture-handler react-native-screens react-native-safe-area-context @react-native-community/masked-view
