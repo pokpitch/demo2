@@ -19,10 +19,10 @@ interface HomeScreenProps {}
 const HomeScreen: React.FunctionComponent<HomeScreenProps> = (props) => {
     return (
         <ImageBackground source={require('./assets/img/bg.png')} style={{flex:1}}>
+            {/* Authen Section */}
             <View 
             style={{
                 flexDirection: 'column',
-                height: 200, 
                 backgroundColor: '#FFF7', 
                 marginTop: 30,
                 marginLeft: 30,
@@ -61,6 +61,7 @@ const HomeScreen: React.FunctionComponent<HomeScreenProps> = (props) => {
                         containerStyle={{flex: 1}} 
                         />                            
                 </View>
+                <Button title="Login" />
             </View>
         </ImageBackground>
     )
