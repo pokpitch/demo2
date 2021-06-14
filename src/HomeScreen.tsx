@@ -61,7 +61,7 @@ const HomeScreen: React.FunctionComponent<HomeScreenProps> = (props) => {
                         containerStyle={{flex: 1}} 
                         />                            
                 </View>
-                <Button title="Login" />
+                <Button title="Login" onPress={() => {}} />
             </View>
         </ImageBackground>
     )
