@@ -39,7 +39,8 @@ const HomeScreen: React.FunctionComponent<HomeScreenProps> = (props) => {
                         backgroundColor: 'green', 
                         borderRadius: 15
                         }} />
-                        <Input 
+                        <Input
+                        keyboardType="email-address" 
                         placeholder="Username" 
                         containerStyle={{flex: 1}} 
                         />                            
