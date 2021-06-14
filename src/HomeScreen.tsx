@@ -72,6 +72,13 @@ const HomeScreen: React.FunctionComponent<HomeScreenProps> = (props) => {
                 </TouchableOpacity>
 
             </View>
+
+            {/* Banner */}
+            <Image
+            resizeMode='contain' 
+            source={require('./assets/img/header_react_native.png')} 
+            style={{width: '100%'}}
+            />
         </ImageBackground>
     )
 }
