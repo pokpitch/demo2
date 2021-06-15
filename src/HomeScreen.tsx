@@ -16,8 +16,12 @@ import {
 import Icon from 'react-native-vector-icons/FontAwesome';
 import {Input} from 'react-native-elements';
 import {useNavigation} from '@react-navigation/native';
+import {StackNavigationProp} from '@react-navigation/stack';
+import {RootStackParamList} from './RootNavigationParams';
 
 interface HomeScreenProps {}
+
+type HomeScreenNavigationProp = StackNavigationProp<RootStackParamList, 'Home'>;
 
 const HomeScreen: React.FunctionComponent<HomeScreenProps> = (props) => {
     React.useEffect(() => {
@@ -25,7 +29,7 @@ const HomeScreen: React.FunctionComponent<HomeScreenProps> = (props) => {
         setNavigationOption();
     }, []);
 
-    const navigation = useNavigation();
+    const navigation = useNavigation<HomeScreenNavigationProp>();
 
     //Initial navigation option
     const setNavigationOption = () => {
