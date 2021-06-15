@@ -1,0 +1,53 @@
+Welcome to ReactNative (CodeMobiles)
+https://drive.google.com/file/d/1T3d2EKv0equMPp-ewb6vbezsm0MS3xmw/view?usp=sharing
+
+
+3 Factor to Use ReactNative
+1. Easy?
+2. Reuse?
+3. Popular?
+
+
+# Check node, yarn, java, react-native-cli
+# Setup ANDROID_HOME AND JAVA_HOME in environment variable
+Go to your React-native Project -> Android
+Create a file local.properties
+Open the file
+paste your Android SDK path like below
+
+in Windows sdk.dir = C:\\Users\\USERNAME\\AppData\\Local\\Android\\sdk
+in macOS sdk.dir = /Users/USERNAME/Library/Android/sdk
+in linux sdk.dir = /home/USERNAME/Android/Sdk
+Replace USERNAME with your user name
+
+Now, Run the react-native run-android in your terminal.
+
+# Setup ADB Path
+# Setup VSCode Extension
+  - Prettier
+  - Android Emulator Launcher
+  - ES7
+  - Path Intellisense
+  - Color highlight
+  - VSCode-Icon
+
+
+npx react-native init demo1
+npx react-native init demo2 --template react-native-template-typescript
+
+Review Day1#
+-----------------------
+- What and Why is React-Native?
+- Component? 
+  - Lifecycle
+  - Communication [props, state]
+- Variable [primitive, props, state]
+  - primitive changed => no side-effect
+  - state or props changed  => side-effect
+
+
+
+
+
+
+
