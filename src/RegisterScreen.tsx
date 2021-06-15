@@ -15,16 +15,12 @@ import {
 
 import Icon from 'react-native-vector-icons/FontAwesome';
 import { Input } from 'react-native-elements';
+import { AccountType } from './types/account.interfeace';
 
 interface RegisterScreenProps {}
 
-type AccountType = {
-    username: string;
-    password: string;
-}
-
 const RegisterScreen: React.FunctionComponent<RegisterScreenProps> = (props) => {
-    
+
     const [account, setAccount] =  React.useState<AccountType>({
         username: '', 
         password: ''
