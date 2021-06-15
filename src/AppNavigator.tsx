@@ -17,6 +17,7 @@ const RootStack = () => {
         <Stack.Navigator initialRouteName='Home'>
             <Stack.Screen name='Home' component={HomeScreen} />
             <Stack.Screen name='Register' component={RegisterScreen} />
+            <Stack.Screen name="Success" component={SuccessTab} />
         </Stack.Navigator>
     )
 }
