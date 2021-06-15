@@ -17,6 +17,7 @@ import {CompositeNavigationProp} from '@react-navigation/native';
 import {StackNavigationProp} from '@react-navigation/stack';
 import {RootStackParamList, RootTabParamList} from './RootNavigationParams';
 import {BottomTabNavigationProp} from '@react-navigation/bottom-tabs';
+import { YoutubeResult } from './types/youtube.interface';
 
 interface JSONFeedScreenProps {}
 
@@ -32,8 +33,8 @@ const JSONFeedScreen: React.FunctionComponent<JSONFeedScreenProps> = props => {
     let regUsername = 'admin'; // await AsyncStorage.getItem('username')
     let regPassword = 'password'; // await AsyncStorage.getItem('password')
     let data = `username=${regUsername}&password=${regPassword}&type=foods`;
-    let result = await axios.post(url, data);
-    console.log(result.data);
+    let result = await axios.post<YoutubeResult>(url, data);
+    console.log(result.data.youtubes[0].title);
   };
 
   return (
