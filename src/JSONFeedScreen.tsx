@@ -39,6 +39,16 @@ const JSONFeedScreen: React.FunctionComponent<JSONFeedScreenProps> = props => {
     setDataArray(result.data.youtubes)
   };
 
+  type renderRowProps = {
+      item: Youtube;
+  }
+
+  const renderRow = ({item}: renderRowProps) => (
+    <Text>
+        {item.title}
+    </Text>
+  )
+
   return (
     <ImageBackground 
     style={{flex: 1}} 
@@ -46,7 +56,7 @@ const JSONFeedScreen: React.FunctionComponent<JSONFeedScreenProps> = props => {
       <FlatList
       style={styles.container}
       data={dataArray}
-      renderItem={({item, index})=>(<Text>{index}.{item.title}</Text>)}
+      renderItem={renderRow}
       keyExtractor={item => String(Math.random())}
       />
     </ImageBackground>
