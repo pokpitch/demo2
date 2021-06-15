@@ -3,7 +3,6 @@
  import AppNavigator from './src/AppNavigator';
  import {NavigationContainer} from '@react-navigation/native';
 
-
  interface AppProps {}
 
  const App: React.FunctionComponent<AppProps> = props => {
