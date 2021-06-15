@@ -21,42 +21,20 @@ import {BottomTabNavigationProp} from '@react-navigation/bottom-tabs';
 interface JSONFeedScreenProps {}
 
 const JSONFeedScreen: React.FunctionComponent<JSONFeedScreenProps> = props => {
-    
-    const dataArray = [
-    'IOT',
-    'SwiftUI',
-    'Angular',
-    'SwiftUI',
-    'Angular',
-    'SwiftUI',
-    'Angular',
-    'SwiftUI',
-    'Angular',
-    'Angular',
-    'SwiftUI',
-    'Angular',
-    'Angular',
-    'SwiftUI',
-    'Angular',
-    'Angular',
-    'SwiftUI',
-    'Angular',
-    'Angular',
-    'SwiftUI',
-    'Angular',
-    'Angular',
-    'SwiftUI',
-    'Angular',
-    'Angular',
-    'SwiftUI',
-    'Angular',
-    'Angular',
-    'SwiftUI',
-    'Angular',
-    'Angular',
-    'SwiftUI',
-    'Angular',
-  ];
+
+  useEffect(() => {
+    loadData();
+  }, []);
+
+  const loadData = async () => {
+    console.log('JSON Created');
+    let url = 'https://codemobiles.com/adhoc/youtubes/index_new.php';
+    let regUsername = 'admin'; // await AsyncStorage.getItem('username')
+    let regPassword = 'password'; // await AsyncStorage.getItem('password')
+    let data = `username=${regUsername}&password=${regPassword}&type=foods`;
+    let result = await axios.post(url, data);
+    console.log(result.data);
+  };
 
   return (
     <ImageBackground 
@@ -64,7 +42,7 @@ const JSONFeedScreen: React.FunctionComponent<JSONFeedScreenProps> = props => {
     source={require('./assets/img/bg.png')}>
       <FlatList
       style={styles.container}
-      data={dataArray}
+      data={[]}
       renderItem={({item, index})=>(<Text>{item}</Text>)}
       keyExtractor={item => String(Math.random())}
       />
