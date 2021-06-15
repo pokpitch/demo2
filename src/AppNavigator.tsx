@@ -10,6 +10,7 @@ import JSONFeedScreen from './JSONFeedScreen';
 import CameraScreen from './CameraScreen';
 
 const Stack = createStackNavigator();
+const Tab = createBottomTabNavigator();
 
 const RootStack = () => {
     return (
@@ -17,6 +18,15 @@ const RootStack = () => {
             <Stack.Screen name='Home' component={HomeScreen} />
             <Stack.Screen name='Register' component={RegisterScreen} />
         </Stack.Navigator>
+    )
+}
+
+const SuccessTab = () => {
+    return(
+        <Tab.Navigator initialRouteName='Json'>
+            <Tab.Screen name='Json' component={JSONFeedScreen} />
+            <Tab.Screen name='Camera' component={CameraScreen} />
+        </Tab.Navigator>
     )
 }
 
