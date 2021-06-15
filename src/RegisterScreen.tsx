@@ -18,8 +18,18 @@ import { Input } from 'react-native-elements';
 
 interface RegisterScreenProps {}
 
+type AccountType = {
+    username: string;
+    password: string;
+}
+
 const RegisterScreen: React.FunctionComponent<RegisterScreenProps> = (props) => {
-    const [account, setAccount] =  React.useState({username: '', password: ''});
+    
+    const [account, setAccount] =  React.useState<AccountType>({
+        username: '', 
+        password: ''
+    });
+
     return (
         <ImageBackground source={require('./assets/img/bg.png')} style={{flex:1}}>
             {/* Authen Section */}
@@ -42,7 +52,7 @@ const RegisterScreen: React.FunctionComponent<RegisterScreenProps> = (props) => 
                         setAccount({...account, username: text});
                         console.log('Username: ' + account.username);
                     }}
-                    />
+                />
 
                 {/* Password Input */}
                 <StreamEntry 
@@ -53,7 +63,7 @@ const RegisterScreen: React.FunctionComponent<RegisterScreenProps> = (props) => 
                         setAccount({...account, password: text});
                         console.log('Password: ' + account.password);
                     }}
-                    />
+                />
 
                 <Text>Debug: {JSON.stringify(account)}</Text>
 
