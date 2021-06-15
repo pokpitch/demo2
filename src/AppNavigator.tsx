@@ -17,16 +17,63 @@ const RootStack = () => {
         <Stack.Navigator initialRouteName='Home'>
             <Stack.Screen name='Home' component={HomeScreen} />
             <Stack.Screen name='Register' component={RegisterScreen} />
-            <Stack.Screen name="Success" component={SuccessTab} />
+            <Stack.Screen
+                    name="Success"
+                    component={SuccessTab}
+                    options={{
+                    title: 'Success',
+                    headerStyle: {
+                        backgroundColor: '#119CED',
+                    },
+                    headerTintColor: '#FFFFFF',
+                    headerTitleStyle: {color: '#fff'},
+                    }}
+            />
         </Stack.Navigator>
     )
 }
 
+const tab1 = {
+  tabBarLabel: 'JSON',
+  tabBarIcon: ({focused}: any) => (
+    <Image
+      style={{
+        height: 28,
+        width: 28,
+      }}
+      resizeMode="contain"
+      source={
+        focused
+          ? require('./assets/img/ic_profile_select.png')
+          : require('./assets/img/ic_profile.png')
+      }
+    />
+  ),
+};
+
+const tab2 = {
+  tabBarLabel: 'Camera',
+  tabBarIcon: ({focused}: any) => (
+    <Image
+      style={{
+        height: 28,
+        width: 28,
+      }}
+      resizeMode="contain"
+      source={
+        focused
+          ? require('./assets/img/ic_card_select.png')
+          : require('./assets/img/ic_card.png')
+      }
+    />
+  ),
+};
+
 const SuccessTab = () => {
     return(
         <Tab.Navigator initialRouteName='Json'>
-            <Tab.Screen name='Json' component={JSONFeedScreen} />
-            <Tab.Screen name='Camera' component={CameraScreen} />
+            <Tab.Screen name='Json' component={JSONFeedScreen} options={tab1} />
+            <Tab.Screen name='Camera' component={CameraScreen} options={tab2} />
         </Tab.Navigator>
     )
 }
