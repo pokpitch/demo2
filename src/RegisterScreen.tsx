@@ -41,7 +41,7 @@ const RegisterScreen: React.FunctionComponent<RegisterScreenProps> = (props) => 
     // Initial navigation option
     const setNavigationOption = () => {
         navigation.setOptions({
-        title: 'Home',
+        title: 'Register',
         headerStyle: {
             backgroundColor: '#119CED',
         },
