@@ -118,7 +118,10 @@ const HomeScreen: React.FunctionComponent<HomeScreenProps> = (props) => {
             <Button title="Login" onPress={() => {}} />
 
             <View style={{marginTop: 16}} />
-            <TouchableOpacity style={{height: 30}}>
+            <TouchableOpacity 
+                style={{height: 30}}
+                onPress={() => navigation.navigate('Register')}
+            >
             <Text style={{textAlign: 'center'}}>Register</Text>
             </TouchableOpacity>
         </View>
