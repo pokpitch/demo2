@@ -17,7 +17,7 @@ import {CompositeNavigationProp} from '@react-navigation/native';
 import {StackNavigationProp} from '@react-navigation/stack';
 import {RootStackParamList, RootTabParamList} from './RootNavigationParams';
 import {BottomTabNavigationProp} from '@react-navigation/bottom-tabs';
-import { YoutubeResult } from './types/youtube.interface';
+import { Youtube, YoutubeResult } from './types/youtube.interface';
 
 interface JSONFeedScreenProps {}
 
@@ -27,6 +27,8 @@ const JSONFeedScreen: React.FunctionComponent<JSONFeedScreenProps> = props => {
     loadData();
   }, []);
 
+  const [dataArray, setDataArray] = useState<Youtube[]>([]);
+
   const loadData = async () => {
     console.log('JSON Created');
     let url = 'https://codemobiles.com/adhoc/youtubes/index_new.php';
@@ -34,7 +36,7 @@ const JSONFeedScreen: React.FunctionComponent<JSONFeedScreenProps> = props => {
     let regPassword = 'password'; // await AsyncStorage.getItem('password')
     let data = `username=${regUsername}&password=${regPassword}&type=foods`;
     let result = await axios.post<YoutubeResult>(url, data);
-    console.log(result.data.youtubes[0].title);
+    setDataArray(result.data.youtubes)
   };
 
   return (
@@ -43,8 +45,8 @@ const JSONFeedScreen: React.FunctionComponent<JSONFeedScreenProps> = props => {
     source={require('./assets/img/bg.png')}>
       <FlatList
       style={styles.container}
-      data={[]}
-      renderItem={({item, index})=>(<Text>{item}</Text>)}
+      data={dataArray}
+      renderItem={({item, index})=>(<Text>{index}.{item.title}</Text>)}
       keyExtractor={item => String(Math.random())}
       />
     </ImageBackground>
