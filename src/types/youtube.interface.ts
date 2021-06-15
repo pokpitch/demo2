@@ -1,4 +1,4 @@
-export interface Welcome {
+export interface YoutubeResult {
     youtubes:  Youtube[];
     error:     boolean;
     error_msg: string;
