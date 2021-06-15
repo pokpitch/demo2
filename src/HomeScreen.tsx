@@ -115,7 +115,12 @@ const HomeScreen: React.FunctionComponent<HomeScreenProps> = (props) => {
             </View>
 
             <View style={{marginTop: 30}} />
-            <Button title="Login" onPress={() => {}} />
+            <Button
+            title="Login"
+            onPress={() => {
+                navigation.navigate('Success');
+            }}
+            />
 
             <View style={{marginTop: 16}} />
             <TouchableOpacity 
