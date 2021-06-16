@@ -35,18 +35,50 @@ Now, Run the react-native run-android in your terminal.
 npx react-native init demo1
 npx react-native init demo2 --template react-native-template-typescript
 
+
 Review Day1#
 -----------------------
 - What and Why is React-Native?
 - Component? 
   - Lifecycle
   - Communication [props, state]
-- Variable [primitive, props, state]
+  - Variable [primitive, props, state]
   - primitive changed => no side-effect
   - state or props changed  => side-effect
+  - Style [inline, Sytlesheet]  
+  - Event Prop - onPress
+  - Listener Func - handleLogin
+  - Application Flow : Index.js -> App -> Sub component (HomeScreen, RegisterScreen...)
+  - ios and android folder
+  - yarn add xxxxx 
 
 
-
+Review Day2#
+-----------------------
+- React Navigation
+  - useNavigation
+  - Stack and Tab
+  - AppNavigator
+  - navation.navigate("") and goBack
+  - RootStackParamListProps
+  - RootTabParamsListProps 
+  - handle Scene before and after authen
+- Axios Promise base http client
+- Async vs Await
+- Http Get, POST
+- Http post with urlencoded
+- parse model with quicktype axios.post<YoutubeResult>(url, data);
+- map operator
+- FlatList
+  data, renderItem, Header, refreshing
+- Youtube Player
+- Practice Youtube layout
+- Camera and Picker Image
+- Browse photo from camera or gallery    
+- ternery condition ? &&
+- Uplaod image with formdata multiple (text and file)
+- NodeJS and Express 
+- Rest Cleint (VSCode Extension like postman)
 
 
 
